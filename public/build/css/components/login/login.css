@@ -1,4 +1,64 @@
+@font-face {
+  font-family: "Lobster-Regular";
+  src: url("./../../content/fonts/Lobster-Regular.ttf") format("truetype"); }
+h1 {
+  margin-top: 0; }
+
 .blue {
-  color: blue; }
+  color: white;
+  font-family: Lobster-Regular;
+  font-size: 3em; }
+
+.background {
+  background-image: url("./../../content/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0; }
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100vw;
+  height: 100vh; }
+
+.outter_wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.inner_wrapper {
+  text-align: center;
+  z-index: 1; }
+
+.btn {
+  background: #ffd500;
+  background-image: -webkit-linear-gradient(top, #ffd500, #ff8400);
+  background-image: -moz-linear-gradient(top, #ffd500, #ff8400);
+  background-image: -ms-linear-gradient(top, #ffd500, #ff8400);
+  background-image: -o-linear-gradient(top, #ffd500, #ff8400);
+  background-image: linear-gradient(to bottom, #ffd500, #ff8400);
+  -webkit-border-radius: 29;
+  -moz-border-radius: 29;
+  border-radius: 29px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none; }
+
+.btn:hover {
+  background: #fc793c;
+  background-image: -webkit-linear-gradient(top, #fc793c, #ff4400);
+  background-image: -moz-linear-gradient(top, #fc793c, #ff4400);
+  background-image: -ms-linear-gradient(top, #fc793c, #ff4400);
+  background-image: -o-linear-gradient(top, #fc793c, #ff4400);
+  background-image: linear-gradient(to bottom, #fc793c, #ff4400);
+  text-decoration: none; }
 
 /*# sourceMappingURL=login.css.map */

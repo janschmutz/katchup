@@ -3,24 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>KatchUpp</title>
-    <base href="/view1">
-
+    <base href="/">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
     <link rel="stylesheet" href="build/css/main.min.css">
     <script src="libs/angular/angular.min.js"></script>
     <script src="libs/angular-route/angular-route.min.js"></script>
-    <script type="text/javascript"
-            accesskey=""src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA0Zk0qkY2wof0ezmfB8TM3jzr08NKJ8ek">
-    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular-messages.min.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhy21ZJZfoGf_wfgrfob9ymDBazgymDm4&libraries=places"
+            async defer></script>
+    <script src="libs/ngstorage/ngStorage.min.js"></script>
+    <script src="libs/lodash/lodash.js"></script>
+    <script src="libs/angular-simple-logger/dist/angular-simple-logger.js"></script>
+    <script src="libs/angular-google-maps/dist/angular-google-maps.js"></script>
+
     <script src="components/login/logincontroller.js"></script>
-    <script src="components/view2/ctrl2.js"></script>
+    <script src="components/location/location.js"></script>
+    <script src="components/home/home.js"></script>
+    <script src="components/show/show.js"></script>
     <script src="js/routes.js"></script>
     <script src="js/client.js"></script>
-    <script src="factories/testfactory.js"></script>
-    <script src="factories/fb.js"></script>
+    <script src="factories/restApi.js"></script>
+    <script src="factories/geolocationApi.js"></script>
+    <script src="partials/navbar/navbar.js"></script>
+
 </head>
 <body ng-app="sampleApp">
-
+    <div class="background">
+        <div class="overlay">
+        </div>
+    </div>
     <div ng-view></div>
-
 </body>
 </html>

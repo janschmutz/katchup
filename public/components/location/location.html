@@ -1,0 +1,26 @@
+<div class="outter_wrapper">
+    <div class="inner_wrapper">
+        <h1 class="red">{{ tagline }}</h1>
+        <div id="status">
+        </div>
+        <md-datepicker ng-model="myDate" md-placeholder="Enter date"></md-datepicker>
+        <md-input-container id="searchBoxParent">
+
+        </md-input-container>
+        <div id="map_canvas">
+            <script type="text/ng-template" id="searchbox.tpl.html">
+                <md-input-container>
+                    <input type="text" placeholder="Search Box">
+                </md-input-container>
+            </script>
+            <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options">
+                <ui-gmap-search-box template="searchbox.template" events="searchbox.events" parentdiv="searchbox.parentdiv"></ui-gmap-search-box>
+            </ui-gmap-google-map>
+        </div>
+        <button class="btn" ng-click="setSearchPreferences()">Finde Events in der Nähe</button>
+        <br>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,38 @@
+<div class="navbar">
+    <div class="logo">
+        <img id="log" src="./../../content/rounded-glasses-2.png">
+    </div>
+    <div class="date">
+        <md-datepicker ng-change="checkSchedule()" ng-model="date" md-placeholder="Enter date"></md-datepicker>
+        <md-input-container id="searchBoxParent"></md-input-container>
+        <div id="map_canvas">
+            <script type="text/ng-template" id="searchbox.tpl.html">
+                <md-input-container>
+                    <input type="text" placeholder="Search Box">
+                </md-input-container>
+            </script>
+            <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options">
+                <ui-gmap-search-box template="searchbox.template" events="searchbox.events" parentdiv="searchbox.parentdiv"></ui-gmap-search-box>
+            </ui-gmap-google-map>
+        </div>
+    </div>
+</div>
+<div class="outter_wrapper" id="top">
+    <div class="inner_wrapper" id="move">
+
+            <h1>Events in der Nähe</h1>
+            <p>{{status}}</p>
+
+
+            <div class="item" ng-repeat="event in myevents">
+                <div class="eve-img" ng-style="{'background-image': 'url(' + event.cover + ')'}">
+
+                </div>
+                <!--<img src={{event.cover}}>-->
+                <p>{{event.name}}</p>
+                <a ng-href="/show/{{event._id}}">Details</a>
+            </div>
+
+
+    </div>
+</div>

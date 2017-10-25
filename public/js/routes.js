@@ -9,11 +9,19 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
             templateUrl: 'components/login/login.html',
             controller: 'LoginController'
         })
-
-        .when('/view2', {
-            templateUrl: 'components/view2/view2.html',
-            controller: 'Controller2'
+        .when('/location', {
+            templateUrl: 'components/location/location.html',
+            controller: 'LocationController'
         })
+        .when('/home', {
+            templateUrl: 'components/home/home.html',
+            controller: 'HomeController'
+        })
+        .when('/show/:id', {
+            templateUrl: 'components/show/show.html',
+            controller: 'ShowController'
+        })
+
         .otherwise({redirectTo: '/view1'});
 
     $locationProvider.html5Mode(true);

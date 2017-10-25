@@ -1,7 +1,7 @@
 /**
  * Created by janschmutz on 22.03.17.
  */
-var app = angular.module('sampleApp', ['ngRoute', 'appRoutes', 'LoginController', 'Ctrl2'])
+var app = angular.module('sampleApp', ['ngRoute', 'appRoutes', 'LoginController', 'CtrlLocation', 'CtrlHome', 'CtrlShow'])
     .run(function($rootScope, $location) {
         console.log("app run");
         $rootScope.rootFunc = function () {
@@ -13,15 +13,13 @@ var app = angular.module('sampleApp', ['ngRoute', 'appRoutes', 'LoginController'
             console.log(response);
             if (response.status === 'connected') {
                 $rootScope.$apply( function() {
-                    $location.path("/view2").replace();
+                    $location.path("/location").replace();
                 });
                 testAPI();
             } else {
                 /*initiateFBLogin();*/
-
             }
         }
-
         function checkLoginState() {
             FB.getLoginStatus(function(response) {
                 statusChangeCallback(response);
@@ -59,7 +57,7 @@ var app = angular.module('sampleApp', ['ngRoute', 'appRoutes', 'LoginController'
             console.log('Welcome!  Fetching your information.... ');
             FB.api('/me', function(response) {
                 document.getElementById('status').innerHTML =
-                    'Thanks for logging in, ' + response.name + '!';
+                    'Willkommen bei Spectacle, ' + response.name + '!';
             });
         }
     });
